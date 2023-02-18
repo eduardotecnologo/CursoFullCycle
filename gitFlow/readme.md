@@ -57,3 +57,39 @@ Summary of actions:
 Now, start committing on your feature. When done, use:
 
      git flow feature finish contact
+ git flow feature start contact
+Switched to a new branch 'feature/contact'
+
+Summary of actions:
+- A new branch 'feature/contact' was created, based on 'develop'
+- You are now on branch 'feature/contact'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish contact
+
+❯ git branch
+❯ git add .
+❯ git commit -m "create file contact"
+[feature/contact 7dcc72d] create file contact
+ 2 files changed, 71 insertions(+)
+ create mode 100644 gitFlow/contact.html
+ create mode 100644 gitFlow/readme.md
+❯ git status
+On branch feature/contact
+nothing to commit, working tree clean
+❯ git flow feature finish contact
+Switched to branch 'develop'
+Updating 59415fc..7dcc72d
+Fast-forward
+ gitFlow/contact.html | 12 +++++++++++
+ gitFlow/readme.md    | 59 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 71 insertions(+)
+ create mode 100644 gitFlow/contact.html
+ create mode 100644 gitFlow/readme.md
+Deleted branch feature/contact (was 7dcc72d).
+
+Summary of actions:
+- The feature branch 'feature/contact' was merged into 'develop'
+- Feature branch 'feature/contact' has been locally deleted
+- You are now on branch 'develop'
