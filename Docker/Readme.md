@@ -1,6 +1,17 @@
+## Comandos Unix
+
+- $echo $(pwd) (Mostra o caminho local)
+
 ## Lista containers ativos
 
 - $docker ps
+
+## Lista os volumes
+
+- $docker volume ls
+- $docker volume create myvolume (Cria um volume)
+- $docker run -d --name nginx -d --mount type=volume,source=myvolume,target=/app nginx (Create volume)
+- $docker volume prune (mata tudo)
 
 ## Lista containers que já foi executado
 
@@ -32,4 +43,7 @@
 
 ## Montando um volume compartilhado
 
-- $docker run -d --name nginx -p 8080:80 -v /home/edudeveloper/developer/CursoFullCycle/Docker/html/:/usr/share/nginx/html
+- $docker run -d --name nginx -p 8080:80 -v /home/edudeveloper/developer/CursoFullCycle/Docker/html/:/usr/share/nginx/html (Modo antigo)
+- $docker run -d --name nginx -p 8080:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html nginx
+
+- $docker rm $(docker s -a -q) -f (Remove a listade imgens peli id)
